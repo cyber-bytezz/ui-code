@@ -101,7 +101,7 @@ def main():
         """, unsafe_allow_html=True)
 
     st.markdown('<div class="title">Magic UI Transformer✨</div>', unsafe_allow_html=True)
-        st.markdown('<div class="">This the platform where you can generate code from images, making the process of converting images to code easier and more efficient.</div>', unsafe_allow_html=True)
+    st.markdown('<div class="">This the platform where you can generate code from images, making the process of converting images to code easier and more efficient.</div>', unsafe_allow_html=True)
     st.markdown('<div class="subheader">Crafted with 💡 by <a href="https://www.linkedin.com/in/-aro-barath-chandru--12725622a/?originalSubdomain=in">Aro</a></div>', unsafe_allow_html=True)
 
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
