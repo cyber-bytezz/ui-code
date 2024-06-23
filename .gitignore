@@ -1,0 +1,5 @@
+# Streamlit
+########################################################################
+.streamlit/
+lib/streamlit/static
+streamlit-storage

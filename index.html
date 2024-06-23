@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: #f2f2f2;
+  font-family: sans-serif;
+  margin: 0; /* Remove default body margins */
+}
+
+.window {
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.title-bar {
+  background-color: #e0e0e0;
+  padding: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.close-button {
+  background-color: #ffcccc;
+  color: black;
+  border: none;
+  padding: 3px 7px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.button {
+  background-color: #ffffcc;
+  color: black;
+  border: none;
+  padding: 8px 15px;
+  margin: 5px 0;
+  border-radius: 3px;
+  cursor: pointer;
+  width: calc(100% - 10px); /* Adjust button width */
+}
+
+.button-blue {
+  background-color: #cce5ff; 
+}
+
+.text-field {
+  width: calc(100% - 18px); /* Adjust for padding and border */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  margin: 5px 0;
+}
+
+.read-only {
+  background-color: white;
+  color: black;
+}
+
+.legend-box {
+  border: 2px dashed black;
+  padding: 10px;
+  margin: 10px;
+  background-color: white;
+}
+
+.legend-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.legend-item + .legend-item {
+  margin-top: 10px; 
+}
+
+.legend-element {
+  margin-right: 10px;
+}
+
+/* Media query for responsiveness - adjust as needed */
+@media (max-width: 600px) {
+  .window {
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .button {
+    font-size: 0.9em;
+  }
+
+  .text-field {
+    font-size: 0.9em;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="window">
+  <div class="title-bar">
+    <h2 class="title">John Doe, Slidely Task 2 - Slidely Form App</h2>
+    <button class="close-button">X</button>
+  </div>
+  <button class="button">VIEW SUBMISSIONS (CTRL + V)</button>
+  <button class="button button-blue">CREATE NEW SUBMISSION (CTRL + N)</button>
+</div>
+
+<div class="window">
+  <div class="title-bar">
+    <h2 class="title">John Doe, Slidely Task 2 - View Submissions</h2>
+    <button class="close-button">X</button>
+  </div>
+  <label for="name">Name:</label>
+  <input type="text" id="name" class="text-field read-only" value="John Doe" readonly>
+
+  <label for="email">Email:</label>
+  <input type="text" id="email" class="text-field read-only" value="johndoe@gmail.com" readonly>
+
+  <label for="phone">Phone Num:</label>
+  <input type="text" id="phone" class="text-field read-only" value="9876543210" readonly>
+
+  <label for="github">Github Link For Task 2:</label>
+  <input type="text" id="github" class="text-field read-only" value="https://github.com/john_doe/my_slidely_task/" readonly>
+
+  <label for="stopwatch">Stopwatch time:</label>
+  <input type="text" id="stopwatch" class="text-field read-only" value="00:01:19" readonly>
+
+  <button class="button">PREVIOUS (CTRL + P)</button>
+  <button class="button button-blue">NEXT (CTRL + N)</button>
+</div>
+
+<div class="window">
+  <div class="title-bar">
+    <h2 class="title">John Doe, Slidely Task 2 - Create Submission</h2>
+    <button class="close-button">X</button>
+  </div>
+  <label for="create-name">Name:</label>
+  <input type="text" id="create-name" class="text-field">
+
+  <label for="create-email">Email:</label>
+  <input type="text" id="create-email" class="text-field">
+
+  <label for="create-phone">Phone Num:</label>
+  <input type="text" id="create-phone" class="text-field">
+
+  <label for="create-github">Github Link For Task 2:</label>
+  <input type="text" id="create-github" class="text-field">
+
+  <div style="display: flex; align-items: center; justify-content: space-between;"> 
+    <button class="button" style="width: auto;">TOGGLE STOPWATCH (CTRL + T)</button>
+    <input type="text" id="create-stopwatch" class="text-field read-only" value="00:00:00" readonly style="width: auto; flex-grow: 1; margin-left: 10px;"> 
+  </div>
+  <button class="button button-blue">SUBMIT (CTRL + S)</button>
+</div>
+
+<div class="legend-box">
+  <h3 class="legend-title">LEGEND</h3>
+  <div class="legend-item">
+    <button class="button legend-element"> </button>
+    <span>BUTTON</span>
+  </div>
+  <div class="legend-item">
+    <button class="button button-blue legend-element"> </button>
+    <span>BUTTON</span>
+  </div>
+  <div class="legend-item">
+    <input type="text" class="text-field legend-element">
+    <span>EDITABLE TEXT FIELD</span>
+  </div>
+  <div class="legend-item">
+    <input type="text" class="text-field read-only legend-element" readonly>
+    <span>READ-ONLY TEXT FIELD</span>
+  </div>
+  <div class="legend-item">
+    <span class="legend-element">CTRL + &lt;H&gt;</span>
+    <span>KEYBOARD SHORTCUT</span>
+  </div>
+</div>
+</body>
+</html>
